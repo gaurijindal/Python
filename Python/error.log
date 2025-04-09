@@ -1,0 +1,6 @@
+ERROR:root:division by zero
+Traceback (most recent call last):
+  File "C:\Users\gauri.jindal\AppData\Local\Temp\ipykernel_9896\2827136070.py", line 7, in <module>
+    print(10/value)
+          ~~^~~~~~
+ZeroDivisionError: division by zero

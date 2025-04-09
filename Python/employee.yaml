@@ -1,0 +1,10 @@
+employee:
+  name: Alice
+  age: 30
+  contact:
+    email: alice@yahoo.com
+    phone: '9211720486'
+  skills:
+  - Python
+  - Django
+  - SQL

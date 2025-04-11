@@ -281,24 +281,54 @@
 # 4.Multiple File Inputs
 # Goal: Use nargs='+' to accept a list of file names
 
-import argparse
+# import argparse
 
-parser = argparse.ArgumentParser()  
+# parser = argparse.ArgumentParser()  
 
-parser.add_argument('fname', nargs = '+',  help = 'List of file names')
+# parser.add_argument('fname', nargs = '+',  help = 'List of file names')
 
-args = parser.parse_args()
+# args = parser.parse_args()
 
-print(args.fname)
+# print(args.fname)
 
 
 # 5.Word Counter
 # Description:
 # Accept a sentence and count number of words.
 
+# import argparse
+
+# parser = argparse.ArgumentParser()
+
+# parser.add_argument("sentence", type=str, nargs='+', help="The sentence to count words in.")
+
+# args = parser.parse_args()
+
+# sentence = ' '.join(args.sentence)
+# n = sentence.split()
+
+# print(len(n))
+
+
+
 # 6.Create a User Profile
 # Description:
 # Collect user's name, age, and gender from command line and print profile.
+
+# import argparse
+
+# parser = argparse.ArgumentParser()
+
+# parser.add_argument("name", help="Enter your name")
+# parser.add_argument("-a","--age", required=True, help="Enter your age")
+# parser.add_argument("-g", "--gender", choices=['Male', 'Female'], help="Enter your Gender")
+
+# args = parser.parse_args()
+
+# print(f"The name is {args.name}.")
+# print(f"The age is {args.age}.")
+# print(f"The gender is {args.gender}.")
+
 
 # 7.File Analyzer
 # Description:

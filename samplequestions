@@ -1,0 +1,478 @@
+1) d1={1:"ch",2:"LO"} 
+
+d2=d1 
+
+d2.clear() 
+
+d1 
+
+ 
+
+Output:     {} 
+
+ 
+
+2)   
+
+for i in range(5): 
+
+    if i==3: 
+
+        continue 
+
+    print(i) 
+
+ 
+
+Output:  
+
+0 
+1 
+2 
+4 
+
+ 
+
+3)  
+
+d1={'a':10,'b':11,'c':89,'a':12} 
+
+d1 
+
+ 
+
+Output: {'a': 12, 'b': 11, 'c': 89} 
+
+ 
+
+4) *args is used to pass a variable number of non-keyworded arguments to a function. 
+
+ 
+
+5) **kwargs enables the function to accept a variable number of keyword arguments 
+
+ 
+
+6) Default arguments must appear after non-default arguments in the function definition. 
+
+ 
+
+7) Positional arguments must always come first. These are the arguments passed to the function based on their position. 
+
+Keyword arguments must come after all positional arguments. These are arguments passed with the parameter name explicitly mentioned. 
+
+Positional arguments first, followed by default arguments, and finally keyword arguments. 
+
+ 
+
+8) difference between syntax and semantic error 
+
+Syntax Errors: Prevent the code from running (caught by the interpreter). 
+
+During the parsing stage (before execution). 
+
+Semantic Errors: Allow the code to run, but produce unintended results due to flawed logic. 
+
+During the execution stage (runtime). 
+
+ 
+
+9) is list comprehension more efficient than map 
+
+Ans: yes ,sometime list comprehension is efficient than map 
+
+ 
+
+10) can lambda be used in list comprehension 
+
+Ans : YES 
+
+ 
+
+11) which of the following is true about lambda? 
+
+ 
+
+Ans:  a lambda function (also called an anonymous function) can only hold a single expression, not multiple expressions or statements. 
+
+ 
+
+12) what does yield do? 
+
+ 
+
+ 
+
+ 
+
+13)  continue: 
+
+The continue statement is used to skip the rest of the current iteration and move to the next one. 
+
+ 
+
+14) pass: 
+
+The pass statement in Python is a placeholder that does nothing when executed. It's often used in situations where a block of code is syntactically required but you don't want to write any logic yet. 
+
+ 
+
+15)  both for and while are used in generator 
+
+ 
+
+16)  Default Behavior: 
+
+seek() without arguments resets the cursor to the start of the file (position 0) relative to the beginning of the file (whence=0). 
+
+No Error: 
+
+The method does not throw an error if no arguments are passed; it simply defaults to moving the cursor to the start. 
+
+Eg: 
+
+with open("example.txt", "r") as file: 
+    file.seek()  # Equivalent to file.seek(0, 0) 
+    print(file.read())  # Reads the file from the beginning 
+
+ 
+
+17)  which is the inbuilt function which explicitily deletes the variable? 
+
+ Ans :del 
+
+ 
+
+18) Java has garbage value , in python which is used? 
+
+Ans : del 
+
+ 
+
+19)  max(min(False,13,-4),2,7)  what is the output? 
+
+Ans : 7 
+
+ 
+
+20) st = ("abc DEF") 
+
+print(st.capitalize())   
+
+Ans:  Abc def 
+
+ 
+
+21) def isPrime(n): 
+
+    if n==0: 
+
+        return True 
+
+    if n==1: 
+
+        return False 
+
+    if n%2==0 or n%3==0: 
+
+        return True 
+
+    i=5 
+
+    while i*i>n: 
+
+        if n%i==0 or n%(i+2)==0: 
+
+            return False 
+
+        i+=5 
+
+    return True 
+
+  
+
+isPrime(17) 
+
+ 
+
+Ans: True 
+
+ 
+
+22) def outer(): 
+
+    x = 'outer' 
+
+    def inner(): 
+
+        nonlocal x 
+
+        x = 'inner' 
+
+        print(x) 
+
+    inner() 
+
+    print(x) 
+
+outer() 
+
+x = 'global' 
+
+print(x) 
+
+ 
+
+Ans: inner 
+     inner 
+     global 
+
+ 
+
+23) for i in range(0,2): 
+
+    for j in range(0,3): 
+
+        print(i,j,end=" ") 
+
+Ans: 0 0 0 1 0 2 1 0 1 1 1 2 
+
+24) a="a@b@c@d" 
+
+print(a.partition("@")) 
+
+print(a.split("@",4)) 
+
+ 
+
+Ans: ('a', '@', 'b@c@d') 
+['a', 'b', 'c', 'd'] 
+
+ 
+
+25) tub=(1,2,[3,4],5) 
+
+tub[2][0]=10 
+
+print(tub) 
+
+ 
+
+Ans: (1, 2, [10, 4], 5) 
+
+ 
+
+26) import copy 
+
+x = [1, [2, 3]] 
+
+y = copy.copy(x) 
+
+y[1][0] = 10 
+
+print(x) 
+
+Ans: [1, [10, 3]] 
+
+ 
+
+27) def a(p,n=10,r): 
+
+    return p*n+r/1000 
+
+print(a(1000,4)) 
+
+ 
+
+Ans:Error 
+
+ 
+
+28) x=10 
+
+while x<5: 
+
+    x-=1 
+
+    print(x) 
+
+Ans: No Output or 0 times 
+
+29) x=10 
+
+while x>0: 
+
+    print(x) 
+
+    x-=1 
+
+Ans: 
+
+10 
+9 
+8 
+7 
+6 
+5 
+4 
+3 
+2 
+1 
+
+Or  
+
+10 times 
+
+ 
+
+30) list1=["name",age;,"first"] 
+
+list2=["geetha",7,"class"] 
+
+list3=zip(list1,list2) 
+
+print(list3) 
+
+ 
+
+Ans:Error or none 
+
+ 
+
+31) max(min(False,-3,4), 2,7) 
+
+Ans : 7 
+
+ 
+
+32) for x in range(4): 
+
+    if x==3: 
+
+        break 
+
+    print(x) 
+
+ 
+
+Ans: 0 1 2 
+
+33) Which one is correct syntax for adding 10 in x:  
+
+Ans: lambda x: x+10 
+
+ 
+
+34) Which one is correct for declaring a decorator: 
+
+Ans: @decorator_name function_name 
+
+ 
+
+35) What will happen if iterator is reaching the end: 
+
+Ans: It raises stopIteration error 
+
+ 
+
+36) time complexity of square 
+
+Ans O(1) 
+
+ 
+
+37) list1 = ['a','b','c','d','e']  -e 
+
+li = list1.insert(0,list1.pop(0)) 
+
+print(li) 
+
+Ans : None 
+
+ 
+
+38) 
+
+tup=('a',['b','c','d'],'e') -e 
+
+tup[1][1]='z' 
+
+print(tup) 
+
+Ans :  ('a', ['b', 'z', 'd'], 'e') 
+
+ 
+
+39)  
+
+st = ("abc DEF") 
+
+print(st.capitalize()) 
+
+Ans : Abc def 
+
+ 
+
+40) 
+
+len(sys.argv) 
+
+Ans : No. Of Command Line Arguments 
+
+ 
+
+41) 
+
+the yield keyword in Python is used within a function: 
+
+Ans: to pause its execution and return a value to the caller, but it allows the function to be resumed later from where it left off. 
+
+42) 
+
+usage of for loop in python: 
+
+the for loop is used to iterate over a sequence (such as a list, tuple, dictionary, set, or string) and execute a block of code for each item in the sequence. 
+
+43) 
+
+Def foo(x): 
+
+Try: 
+
+return 1 
+
+Finally: 
+
+return 2 
+
+k=foo() 
+
+Print(k) 
+
+Ans: 2 
+
+ 
+
+44)a=(10) 
+
+Print(type(a)) 
+
+Ans:<class ‘int’> 
+
+ 
+
+ 
+
+45) T = ([1,2,34],)                              
+
+T[0][1] = 90                    o/p: ([1, 90, 34],) 
+
+Print(T) 
+
+46) dic = {1:'a',2:'b',3:'c'}                      
+
+x = dic.get(5,4)                         o/p: 4 
+
+x 
+
+ 

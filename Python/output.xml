@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.3 on win32)" generated="2025-04-19T16:46:21.771976" rpa="false" schemaversion="5">
+<suite id="s1" name="Downloadfile" source="c:\Users\gauri.jindal\Python\Robot\downloadfile.robot">
+<test id="s1-t1" name="Download File From Server" line="14">
+<kw name="Open Connection" owner="Telnet">
+<msg time="2025-04-19T16:46:21.834808" level="INFO">Opening connection to test.rebex.net:23 with prompt: None</msg>
+<msg time="2025-04-19T16:46:42.899679" level="FAIL">TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</msg>
+<arg>${HOST}</arg>
+<doc>Opens a new Telnet connection to the given host and port.</doc>
+<status status="FAIL" start="2025-04-19T16:46:21.834808" elapsed="21.066867">TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</status>
+</kw>
+<kw name="Login" owner="Telnet">
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Logs in to the Telnet server with the given user information.</doc>
+<status status="NOT RUN" start="2025-04-19T16:46:42.902671" elapsed="0.000000"/>
+</kw>
+<kw name="Get File" owner="OperatingSystem">
+<arg>${REMOTE_FILE}</arg>
+<arg>${LOCAL_PATH}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="NOT RUN" start="2025-04-19T16:46:42.903669" elapsed="0.000000"/>
+</kw>
+<kw name="Close Connection" owner="Telnet">
+<doc>Closes the current Telnet connection.</doc>
+<status status="NOT RUN" start="2025-04-19T16:46:42.903669" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-04-19T16:46:21.833811" elapsed="21.070854">TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</status>
+</test>
+<status status="FAIL" start="2025-04-19T16:46:21.777960" elapsed="21.128700"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Downloadfile" id="s1" pass="0" fail="1" skip="0">Downloadfile</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-04-19T16:46:21.805885" level="ERROR">Error in file 'c:\Users\gauri.jindal\Python\Robot\downloadfile.robot' on line 2: Importing library 'SSHLibrary' failed: ModuleNotFoundError: No module named 'SSHLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\gauri.jindal\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_debug_adapter
+  C:\Users\gauri.jindal\Python
+  c:\Users\gauri.jindal\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src
+  c:\Users\gauri.jindal\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_ls\vendored
+  C:\Program Files\Python312\python312.zip
+  C:\Program Files\Python312\DLLs
+  C:\Program Files\Python312\Lib
+  C:\Program Files\Python312
+  C:\Users\gauri.jindal\AppData\Roaming\Python\Python312\site-packages
+  C:\Users\gauri.jindal\AppData\Roaming\Python\Python312\site-packages\win32
+  C:\Users\gauri.jindal\AppData\Roaming\Python\Python312\site-packages\win32\lib
+  C:\Users\gauri.jindal\AppData\Roaming\Python\Python312\site-packages\Pythonwin
+  C:\Program Files\Python312\Lib\site-packages</msg>
+</errors>
+</robot>

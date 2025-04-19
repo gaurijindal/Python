@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.3 on win32)" generated="2025-04-19T16:28:26.502902" rpa="false" schemaversion="5">
+<suite id="s1" name="Server" source="C:\Users\gauri.jindal\Python\Robot\server.robot">
+<test id="s1-t1" name="Connect And Run Command" line="11">
+<kw name="Open Connection" owner="SSHLibrary">
+<msg time="2025-04-19T16:28:26.678401" level="WARN">Keyword 'Open Connection' found both from a custom library 'SSHLibrary' and a standard library 'Telnet'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SSHLibrary.Open Connection' or 'Telnet.Open Connection'.</msg>
+<arg>${HOST}</arg>
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<status status="PASS" start="2025-04-19T16:28:26.678401" elapsed="0.000997"/>
+</kw>
+<kw name="Login" owner="SSHLibrary">
+<msg time="2025-04-19T16:28:26.679398" level="WARN">Keyword 'Login' found both from a custom library 'SSHLibrary' and a standard library 'Telnet'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SSHLibrary.Login' or 'Telnet.Login'.</msg>
+<msg time="2025-04-19T16:28:26.680396" level="INFO">Logging into 'test.rebex.net:22' as 'demo'.</msg>
+<msg time="2025-04-19T16:28:29.701286" level="FAIL">TimeoutError: timed out</msg>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<status status="FAIL" start="2025-04-19T16:28:26.679398" elapsed="3.023914">TimeoutError: timed out</status>
+</kw>
+<kw name="Execute Command" owner="SSHLibrary">
+<var>${output}</var>
+<arg>ls</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<status status="NOT RUN" start="2025-04-19T16:28:29.704296" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${output}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-04-19T16:28:29.704296" elapsed="0.000000"/>
+</kw>
+<kw name="Close Connection" owner="SSHLibrary">
+<doc>Closes the current connection.</doc>
+<status status="NOT RUN" start="2025-04-19T16:28:29.704296" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-04-19T16:28:26.677403" elapsed="3.027873">TimeoutError: timed out</status>
+</test>
+<status status="FAIL" start="2025-04-19T16:28:26.504867" elapsed="3.201406"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Server" id="s1" pass="0" fail="1" skip="0">Server</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-04-19T16:28:26.678401" level="WARN">Keyword 'Open Connection' found both from a custom library 'SSHLibrary' and a standard library 'Telnet'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SSHLibrary.Open Connection' or 'Telnet.Open Connection'.</msg>
+<msg time="2025-04-19T16:28:26.679398" level="WARN">Keyword 'Login' found both from a custom library 'SSHLibrary' and a standard library 'Telnet'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SSHLibrary.Login' or 'Telnet.Login'.</msg>
+</errors>
+</robot>
